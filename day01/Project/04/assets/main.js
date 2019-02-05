@@ -8,8 +8,42 @@ var amount = 0;
 
 
 // Write a program to calculate the total price of your phone purchase.
+	let totalPrice = PHONE_PRICE + TAX_RATE;
 // You will keep purchasing phones (hint: loop!) until you run out of bank balance.
+
+if(totalPrice < SPENDING_THRESHOLD) {
+	totalPrice = totalPrice + ACCESSORY_PRICE;
+}
+
+let totalPhone = bank_balance / totalPrice;
+
+for(amount = 1; amount <= totalPhone; amount++) {
+	// totalPrice = totalPrice*amount;
+	if(totalPrice < bank_balance) {
+		totalPrice = totalPrice + PHONE_PRICE + TAX_RATE;
+	}
+}
+console.log(totalPrice);
+
+
+
+// let totalPhone = bank_balance / PHONE_PRICE;
+// let totalPrice = 0;
+
+// for(amount = 1; amount <= totalPhone; amount++) {
+// 	totalPrice = PHONE_PRICE * amount;
+// 	if(totalPrice < SPENDING_THRESHOLD) {
+// 		totalPrice = totalPrice + ACCESSORY_PRICE;
+// 	} else {
+// 		totalPrice;
+// 	}
+// 	totalPrice = totalPrice + TAX_RATE;
+
+// }
+// console.log(totalPrice);
+
 // You'll also buy accessories for each phone as long as your purchase amount is below your spending threshold.
+
 
 
 
@@ -28,17 +62,18 @@ var amount = 0;
 
 // Write a program that prints the numbers from 1 to 100. But for multiples of three print “Fizz” instead of the number and for the multiples of five print “Buzz”. For numbers which are multiples of both three and five print “FizzBuzz”.
 
-let tag = document.querySelector("p");
+// let tag = document.querySelector("p");
 
-for (let i = 1; i < 100; i++) {
-	// console.log(i);
-	if(i % 3 === 0 && i % 5 === 0) {
-		console.log("“FizzBuzz”");
-	} else if(i % 3 === 0) {
-		console.log("Fizz");
-	} else if(i % 5 === 0) {
-		console.log("Buzz")
-	} else {
-		console.log(i);
-	}
-}
+// for (let i = 1; i < 100; i++) {
+// 	// console.log(i);
+// 	if(i % 3 === 0 && i % 5 === 0) {
+// 		console.log("“FizzBuzz”");
+// 	} else if(i % 3 === 0) {
+// 		console.log("Fizz");
+// 	} else if(i % 5 === 0) {
+// 		console.log("Buzz")
+// 	} else {
+// 		console.log(i);
+// 	}
+
+// }
