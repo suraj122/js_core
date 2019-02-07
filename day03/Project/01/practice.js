@@ -159,12 +159,14 @@ console.log(printNum);
 let computeProduct = 1;
 let computeSum = 0;
 let num = prompt("Enter a number");
+
 let sum = function (num) {
 	for(let i = 0; i <= num; i++) {
 		computeSum = computeSum + i;
 	}
 	return computeSum;
 };
+
 let product = function (num) {
 	for(let i = 1; i <= num; i++) {
 		computeProduct = computeProduct * i;
