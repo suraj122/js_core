@@ -141,6 +141,18 @@ checkPalindrome("racEcaR");
 
 
 // Counts the number of individual words in a string. For added complexity read these strings in from a text file and generate a summary.
+let str = prompt("Enter a string");
+function countWords(str) {
+  let count = 1;
+  for(i = 0; i < str.length; i++) {
+    if(str[i] === " ") {
+      count++;
+    }
+  }
+  return count;
+}
+
+alert(countWords(str));
 
 // Show the following output using one loop.
 // 1, 2, 3, 4, 5

@@ -5,8 +5,35 @@
 		<meta http-equiv="X-UA-Compatible" content="IE=edge">
 		<title>Project 02</title>
 		<link rel="stylesheet" href="">
+		<style type="text/css" media="screen">
+			.logo-container {
+				background: #bada55;
+				text-align: center;
+			}
+			.logo {
+				cursor: pointer;
+				animation: scale_in-out 5000ms ease-in-out;
+				animation-iteration-count: infinite;
+			}
+			@keyframes scale_in-out {
+				0% {
+					transform: scale(0.8);
+				}
+				
+				50% {
+					transform: scale(1);
+				}
+				
+				100% {
+					transform: scale(0.8);
+				}
+			}
+		</style>
 	</head>
 	<body>
+		<div class="logo-container">
+			<img class="logo" src="images/graft-studio.png" alt="">
+		</div>
 		<script src="script.js"></script>
 	</body>
 </html>
