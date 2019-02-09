@@ -31,20 +31,20 @@ obj = { surname: 'florance' };
 // What's the output.
 var arr = ['Hi'];
 var arr2 = arr;
-console.log(arr === arr2);
+console.log(arr === arr2);  //true
 
 
 
 // What's the output.
 var arr1 = ['Hi!'];
 var arr2 = ['Hi!'];
-console.log(arr1 === arr2);
-console.log(arr == arr2);
+console.log(arr1 === arr2); //false
+console.log(arr == arr2);  //false
 
 
 //What's the output
-console.log([10] === [10]);
-
+console.log([10] === [10]); //false
+ 
 
 // What's the output?
 
