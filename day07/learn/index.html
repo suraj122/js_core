@@ -17,7 +17,7 @@
 			</style>
 	</head>
 	<body>
-		<div>Users:</div>
+		<div id="user">Users:</div>
 		<ul>
 			<li>John</li>
 			<li>Pete</li>
@@ -59,7 +59,55 @@
 				<td>5:5</td>
 			</tr>
 		</table>
+
+		<label>
+			<input type="radio" name="age" value="young" checked> less than 18
+		</label>
+		<label>
+			<input type="radio" name="age" value="mature"> from 18 to 50
+			</label>
+		<label>
+			<input type="radio" name="age" value="senior"> more than 60
+		</label>
+
+		<form name="my-form">
+			<div class="article">Article</div>
+			<div class="long article">Long article</div>
+		</form>
+		<ul class="menu">
+			<li>The</li>
+			<li>test</li>
+		</ul>
+		<ul class="menu">
+			<li>has</li>
+			<li>passed</li>
+		</ul>
+		<h1>Contents</h1>
+		<div class="contents">
+			<ul class="book">
+				<li class="chapter">Chapter 1</li>
+				<li class="chapter">Chapter 1</li>
+			</ul>
+		</div>
 		<!-- Suraj -->
 		<script src="script.js"></script>
+		<script>
+			let user = document.getElementById("user");
+			user.style.background = "red";
+
+			let inputs = document.getElementsByTagName("input")
+			console.log(inputs);
+			for (let input of inputs) {
+				console.log(input.value + ":" + " " + input.checked)
+			}
+
+			let elements = document.querySelectorAll("ul > li:last-child");
+			for (let elem of elements) {
+				console.log(elem.innerHTML); // "test", "passed"
+			}
+			let chapter = document.querySelector(".chapter");
+			console.log(chapter.closest(".book"));
+			console.log(chapter.closest(""))
+		</script>
 	</body>
 </html>
