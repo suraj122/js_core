@@ -12,21 +12,28 @@
                 border-radius: 4px;
                 border: 1px solid turquoise;
             }
+            body {
+                background: red;
+                margin: 10px;
+            }
         </style>
     </head>
-    <body>
+    <body class="body remove">
         <ol id="list">
             <li>0</li>
             <li>1</li>
             <li>2</li>
         </ol>
         <div id="head">head</div>
+        <div id="first">First</div>
+        <div id="second">Second</div>
         <script>
             let div = document.createElement('div');
             div.className = "alert alert-success";
             div.innerHTML = "Hi, <strong>I love Javascript</strong>";
 
             document.body.appendChild(div);
+            setTimeout(() => div.remove(), 5000);
 
             let newLi = document.createElement('li');
             newLi.innerHTML = "Hello, world!";
@@ -44,6 +51,17 @@
 
             head.insertAdjacentHTML('beforebegin', '<p>Hello!</p>');
             head.insertAdjacentHTML('afterend', '<p>Bye</p>');
+            second.after(first);
+            document.body.classList.add('main-page');
+            document.body.classList.remove('remove');
+            document.body.classList.toggle('hello');
+            console.log(document.body.className);
+            // document.body.style.display = "none";
+            // setTimeout(() => {
+            //     document.body.style.display = "";
+            // }, 5000);
+            let style = getComputedStyle(document.body).marginTop;
+            console.log(style);
         </script>
     </body>
 </html>
