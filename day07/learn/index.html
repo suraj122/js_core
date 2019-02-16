@@ -89,6 +89,9 @@
 				<li class="chapter">Chapter 1</li>
 			</ul>
 		</div>
+
+		<div id="elem1">ss</div>
+		<div id="elem2">ss</div>
 		<!-- Suraj -->
 		<script src="script.js"></script>
 		<script>
@@ -105,9 +108,10 @@
 			for (let elem of elements) {
 				console.log(elem.innerHTML); // "test", "passed"
 			}
-			let chapter = document.querySelector(".chapter");
-			console.log(chapter.closest(".book"));
-			console.log(chapter.closest(""))
+
+			let name = prompt("what is your name?", "<b>Suraj Kumar</b>");
+			elem1.innerHTML = name;
+			elem2.textContent = name;
 		</script>
 	</body>
 </html>
