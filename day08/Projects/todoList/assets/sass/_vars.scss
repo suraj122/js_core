@@ -1,0 +1,51 @@
+// =========================
+// Variables
+// =========================
+
+$font-family: 'Open Sans', sans-serif;
+$primary-color: #3464E0;
+$primary-color-shade1: #1840AA;
+$color: #F1F4F9;
+$bg-color: #F8FDFF;
+$text-color: #535353;
+$accent-color: #87D3F3;
+$accent-color1: #30ba67;
+
+
+// =========================
+// Mixins
+// =========================
+
+%flex-between {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+%flex-start {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  justify-content: flex-start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+%flex-center {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}

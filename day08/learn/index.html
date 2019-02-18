@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>DOM Events</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+  </head>
+  <body>
+    <input type="button" onclick="countRabbits()" value="click me" />
+    <input type="button" id="elem" value="thank" />
+    <input type="button" id="elm" value="click" />
+    <input type="button" id="elem1" value="event" />
+    <input type="button" id="elem2" value="event2" />
+    <script>
+      function countRabbits() {
+        for (let i = 0; i < 4; i++) {
+          alert("Rabit Number: " + i)
+        }
+      }
+      elem.onclick = function() {
+        alert("Thank You!");
+      }
+      elm.onclick = function(event) {
+        console.log(event.type + "at" + event.currentTarget);
+        alert("coordinates:" + event.clientX + ":" + event.clientY);
+      }
+      elem1.addEventListener('click', (e) => console.log(event.type + " at " + event.currentTarget));
+
+      class Menu {
+        handleEvent(event) {
+          switch(event.type) {
+            case 'mousedown':
+              elem2.innerHTML = "Mouse button pressed";
+              break;
+            case 'mouseup':
+              elem2.innerHTML += ".... and released";
+              break;
+          }
+        }
+      }
+
+      let menu = new Menu();
+      elem2.addEventListener('mousedown', menu);
+      elem2.addEventListener('mouseup', menu);
+    </script>
+  </body>
+</html>

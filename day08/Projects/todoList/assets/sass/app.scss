@@ -1,0 +1,58 @@
+@import "vars";
+@import "base";
+@import "grid";
+@import "general";
+
+.padding {
+	padding: 80px 0;
+}
+.todo-wrapper {
+	max-width: 550px;
+	width: 100%;
+	margin: 0 auto;
+	box-shadow: 0 0 40px rgba(#000, 0.2);
+	border-radius: 4px;
+	.btn {
+		width: 200px;
+		// margin-left: 20px;
+		height: 50px;
+		padding: 0;
+		border-radius: 0;
+		// border-top-right-radius: 4px;
+		// border-bottom-right-radius: 4px;
+	}
+}
+.form-control {
+	// border: 1px solid $text-color;
+	color: $primary-color;
+	height: 50px;
+	font-weight: 600;
+	border-radius: 0;
+	// border-top-left-radius: 4px;
+	// border-bottom-left-radius: 4px;
+	&:focus {
+		border: 1px solid $primary-color;
+		&::placeholder {
+			color: $primary-color;
+		}
+	}
+	&::placeholder {
+		color: $text-color;
+	}
+}
+.checkbox:checked ~ span {
+	text-decoration: line-through;
+}
+.flex-start {
+	box-shadow: 0 1px 10px rgba(#000, 0.4);
+}
+.todo-item {
+	padding: 14px 16px;
+	background: #fff;
+	margin-top: 1px;
+	box-shadow: 0 1px 4px rgba(#000, 0.4);
+	&last-child {
+		box-shadow: none;
+	}
+	
+}
