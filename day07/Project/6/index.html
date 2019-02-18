@@ -1,9 +1,55 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <title>JS + CSS Clock</title>
-</head>
-<body>
-</body>
+  <head>
+    <meta charset="UTF-8">
+    <title>JS + CSS Clock</title>
+    <link rel="stylesheet" href="asset/style.css">
+  </head>
+  <body>
+    <main class="wrapper">
+      <div class="clock">
+        <div class="hand hour-hand"></div>
+        <div class="hand minute-hand"></div>
+        <div class="hand second-hand"></div>
+        <span class="hour hour-12">12</span>
+        <span class="hour hour-3">3</span>
+        <span class="hour hour-9">9</span>
+        <span class="hour hour-6">6</span>
+        <div class="date">
+          <span class="date-name"></span>
+          <span class="month-name"></span>
+        </div>
+        <div class="center"></div>
+      </div>
+    </main>
+
+    <script>
+      const secondHand = document.querySelector(".second-hand");
+      const minuteHand = document.querySelector(".minute-hand");
+      const hourHand = document.querySelector(".hour-hand");
+
+      const dateName = document.querySelector(".date-name");
+      const monthName = document.querySelector(".month-name");
+
+      function setDate() {
+        const now = new Date();
+
+        const seconds = now.getSeconds();
+        const hour = now.getHours();
+        const minute = now.getMinutes();
+
+        let secondHandDegree = ((seconds / 60) * 360) + 270;
+        let minuteHandDegree = ((minute / 60) * 360) + 270;
+        let hourHandDegree = ((hour / 12) * 360) + 270;
+        secondHand.style.transform = `rotate(${secondHandDegree}deg)`;
+        minuteHand.style.transform = `rotate(${minuteHandDegree}deg)`;
+        hourHand.style.transform = `rotate(${hourHandDegree}deg)`;
+
+        const monthNames = ["Jan", "Feb", "Mar", "Apr", "May", "June", "July", "Aug", "Sep", "Oct", "Nov", "Dec"]
+        dateName.textContent = now.getDate();
+        monthName.textContent = monthNames[now.getMonth()];
+      }
+      setInterval(setDate, 1000);
+    </script>
+  </body>
 </html>
